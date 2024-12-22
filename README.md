@@ -41,7 +41,6 @@
 - **/components**: Contains reusable React components.
 - **/store**: Contains Redux files for state management.
 - **/styles**: Contains CSS files and Material UI themes.
-- **/utils**: Contains helper functions like validation utilities.
 
 ## Contributing
 
