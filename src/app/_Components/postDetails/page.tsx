@@ -18,36 +18,8 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import CommentIcon from "@mui/icons-material/Comment";
 import Link from "next/link";
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme }) => ({
-  marginLeft: "auto",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-  variants: [
-    {
-      props: ({ expand }) => !expand,
-      style: {
-        transform: "rotate(0deg)",
-      },
-    },
-    {
-      props: ({ expand }) => !!expand,
-      style: {
-        transform: "rotate(180deg)",
-      },
-    },
-  ],
-}));
-
 export default function PostDetails({ postD ,allComments=false }: { postD: Post,allComments?:boolean }) {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState(true);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);

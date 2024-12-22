@@ -23,10 +23,11 @@ import toast from "react-hot-toast/headless";
 
 export default function Login() {
 
+  const {push} = useRouter()
 
 
   const dispatch = useDispatch<storeDispatch>();
-  const { isLoading, isSuccess, error, token } = useSelector(
+  const { isLoading, error, token } = useSelector(
     (state: storeState) => state.authReducers
   );
 
@@ -34,10 +35,8 @@ export default function Login() {
     email: "baher00@gmail.com",
     password: "Baher@123",
   };
-  async function handleSubmit(values: LoginData) { }
   
 
-  const {push} = useRouter()
   const formik = useFormik({
     initialValues,
     onSubmit: async(values) => {
@@ -46,7 +45,6 @@ export default function Login() {
       push("/")
       } else {
         toast.error(error)
-        console.log(error)
     }
     },
   });

@@ -1,17 +1,16 @@
 "use client";
 import {
   Button,
-  CircularProgress,
   Container,
-  FormControl,
   Paper,
   TextField,
 } from "@mui/material";
 import axios from "axios";
 import React from "react";
+import { Post } from "../interfaces/Posts";
 
 export default function Profile() {
-  async function addPost(values) {
+  async function addPost(values:Post) {
     console.log(values)
     const { data } = await axios.post(
       `https://linked-posts.routemisr.com/posts`,
