@@ -49,7 +49,3 @@ If you would like to contribute to improving this project, feel free to open a p
 ## License
 
 This project is licensed under the **MIT License**.
-
-## Project Link
-
-For more details, visit the project repository on GitHub: [Linkify](https://github.com/baher-abdo/Linkify)
